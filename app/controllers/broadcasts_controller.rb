@@ -21,14 +21,6 @@ class BroadcastsController < ApplicationController
     end
   end
 
-  def update
-    if @broadcast.update(broadcast_params)
-      render json: @broadcast
-    else
-      render json: @broadcast.errors, status: :unprocessable_entity
-    end
-  end
-
   def destroy
     @broadcast.destroy
   end
